@@ -23,20 +23,22 @@
         //Counter
 
         function createCounter(initValue, countStep) {
-            let stepIter = initValue - countStep;
+            let stepIter = initValue;
 
             const toCount = function() {
                 return stepIter += countStep;
             };
 
             toCount.reset = function() {
-                return stepIter = initValue - countStep;
+                return stepIter = initValue;
             }
 
             return toCount;
         }
 
         const counter = createCounter(1, 2);
+        console.log(counter());
+        console.log(counter());
 
     </script>
 </body>
