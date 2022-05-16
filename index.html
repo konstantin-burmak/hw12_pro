@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>homework12</title>
+</head>
+
+<body>
+    <script>
+        // Task 1
+
+        function calc() {
+            let sum = 0;
+
+            return function(num) {
+                return sum += num;
+            }
+        }
+
+        const someCulc = calc();
+
+        //Counter
+
+        function createCounter(initValue, countStep) {
+            let stepIter = initValue - countStep;
+
+            const toCount = function() {
+                return stepIter += countStep;
+            };
+
+            toCount.reset = function() {
+                return stepIter = initValue - countStep;
+            }
+
+            return toCount;
+        }
+
+        const counter = createCounter(1, 2);
+
+    </script>
+</body>
+
+</html>
